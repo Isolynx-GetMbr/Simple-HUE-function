@@ -1,4 +1,10 @@
-// [2025年9月30日, GetMbr/Isolynx] commenting on my old code
+// [2025年9月30日, GetMbr/Isolynx] commenting on my old code;
+// extremely braindead doing this so that's why there too many 
+// questionable stuff in the code. So I decided to look back at
+// my code and leave it a comment so I will trying to improve it
+// later.
+
+// 🥀🥀🥀
 /* hsl.cpp by GetMbr, please do not skid! */
 #include <Windows.h>
 
@@ -8,9 +14,13 @@
 // int r, g, b;
 // and don't forget to initialize it first!
 Integer red, green, blue;
+// in C\C++ int and boolean here is just the same
+// but different usage
 bool ifcolorblue = false, ifblue = false;
 COLORREF Hue(Integer length) {
 	// large blocks of code, I will shorten it if possible.
+	
+	// or just use the < operator
 	if (red != length) {
 		// forgot to use the if statement back then lmao.
 		// I was too braindead as always.
@@ -48,4 +58,5 @@ int main() {
    // 			CreateSolidBrush(Hue(255)) <- like this.
    //	   ); <- then apply it to the main DC.
 }
+
 
