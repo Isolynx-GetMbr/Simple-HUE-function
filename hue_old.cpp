@@ -1,5 +1,4 @@
-// [2025年9月30日] commenting on my old code
-
+// [2025年9月30日, GetMbr/Isolynx] commenting on my old code
 /* hsl.cpp by GetMbr, please do not skid! */
 #include <Windows.h>
 
@@ -7,13 +6,16 @@
 #define Integer int
 
 // int r, g, b;
+// and don't forget to initialize it first!
 Integer red, green, blue;
 bool ifcolorblue = false, ifblue = false;
 COLORREF Hue(Integer length) {
+	// large blocks of code, I will shorten it if possible.
 	if (red != length) {
 		// forgot to use the if statement back then lmao.
 		// I was too braindead as always.
 		red < length; red++;
+		// use tenary operators instead.
 		if (ifblue == true) {
 			return RGB(red, 0, length);
 		}
@@ -42,7 +44,8 @@ COLORREF Hue(Integer length) {
 
 int main() { 
    // Use this code inside CreateSolidBrush Function. 
-   // e.g. SelectObject(dc,
+   // e.g. SelectObject(dc, <- main DC (device context)
    // 			CreateSolidBrush(Hue(255)) <- like this.
    //	   ); <- then apply it to the main DC.
 }
+
