@@ -1,12 +1,18 @@
+// [2025年9月30日] commenting on my old code
+
 /* hsl.cpp by GetMbr, please do not skid! */
 #include <Windows.h>
 
+// no need for this.
 #define Integer int
 
+// int r, g, b;
 Integer red, green, blue;
 bool ifcolorblue = false, ifblue = false;
 COLORREF Hue(Integer length) {
 	if (red != length) {
+		// forgot to use the if statement back then lmao.
+		// I was too braindead as always.
 		red < length; red++;
 		if (ifblue == true) {
 			return RGB(red, 0, length);
@@ -26,6 +32,7 @@ COLORREF Hue(Integer length) {
 				return RGB(0, length, blue);
 			}
 			else {
+				// should be commas instead of semicolons.
 				red = 0; green = 0; blue = 0;
 				ifblue = true;
 			}
@@ -34,7 +41,8 @@ COLORREF Hue(Integer length) {
 }
 
 int main() { 
-   // Use this code inside CreateSolidBrush Function.
-
-
+   // Use this code inside CreateSolidBrush Function. 
+   // e.g. SelectObject(dc,
+   // 			CreateSolidBrush(Hue(255)) <- like this.
+   //	   ); <- then apply it to the main DC.
 }
