@@ -12,6 +12,7 @@ back to zero when blue reaches 255.                                             
 > back to zero when the RGB blue value finally reaches to 255.
 
 >[!TIP]
-> **(２０２５年１０月２０日)** New version already made, but it only supports
-> C++11, 14 and uo
+> **(2025年10月20日)**
+> New version already made, but it only supports
+> C++11, 14 and up
 
