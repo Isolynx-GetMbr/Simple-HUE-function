@@ -13,7 +13,7 @@ find out about it, and also modern features like lambdas which can make the code
 can make it run on multiple instances without the values getting mixed up when it got executed simutaneously between     </br>
 different threads using the same function.                                                                               </br>
 </br></br>
-# シンプルなHUE関数 (2022)
+# シンプルなHUE関数 (2022年)
 > [旧リポジトリ (main)](https://github.com/GetMbr/My-first-HSL-code-C-/tree/main)
 
 実は2022年に思い浮かんだ結果を基に書いたもので、少し調整と試行錯誤を重ねたが、                               </br>
