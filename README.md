@@ -5,14 +5,11 @@
 
 Actually wrote this based on my outcome that came to my mind back in 2022, a little bit of tweaks and trial and error, </br>
 but still managed it to work anyways. Somehow a little mistake here, as it would reset all the RGB variables           </br>
-back to zero when blue reaches 255.                                                                                        </br>
+back to zero when blue reaches 255.                                                                                    </br>
 
->[!NOTE]
-> Probably going to fix the code for the results to be accurate instead of going
-> back to zero when the RGB blue value finally reaches to 255.
-
->[!TIP]
-> **(2025年10月20日)**
-> New version already made, but it only supports
-> C++11, 14 and up
+### UPDATE (as of 2025年10月20日)
+The new hue code can finally shift without resetting to zero when the blue reaches 255, thanks to phases, which I later  </br>
+find out about it, and also modern features like lambdas which can make the code much shorter and easier while classes   </br>
+can make it run on multiple instances without the values getting mixed up when it got executed simutaneously between     </br>
+different threads using the same function.                                                                               </br>
 
