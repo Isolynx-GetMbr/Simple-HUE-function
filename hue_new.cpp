@@ -43,7 +43,7 @@ public:
 // usage/examples:
 int main( )
 {
-    HDC hdc = GetDC(0); // declares a handle for the device context, which is the main screen itself.
+    HDC hdc = GetDC( 0 ); // declares a handle for the device context, which is the main screen itself.
     // declares a smart pointer that owns the dynamically allocated object of the class hue. similar to
     //   hue h = new hue( );
     // in C#. But was only supported in C++14 and higher. 
@@ -54,7 +54,7 @@ int main( )
     // shift each rgb values by 2
     HBRUSH hb = CreateSolidBrush( a->shift( 2 ) );
     // then apply it with SelectObject to main DC
-    SelectObject(hdc, hb);
+    SelectObject( hdc, hb );
 
     // any code that uses that brush ...
 
