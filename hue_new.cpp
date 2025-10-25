@@ -58,5 +58,7 @@ int main( )
 
     // any code that uses that brush ...
 
+    // and dont forget to clear anything!
+    // use DeleteObject for brushes and other GDI objects and ReleaseDC for the main dc while DeleteDC for the memory dc.
     return 0; // exits the main application.
 }
