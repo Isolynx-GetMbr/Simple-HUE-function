@@ -3,8 +3,8 @@
 
 // lambdas makes it shorter
 // only supports at C++11 and higher.
-#define do_min( a, b, fa, fb ) ( [ & ]( ) { return ( a ) < ( b ) ? ( fa ) : ( fb ); } ( ) )
-#define do_max( a, b, fa, fb ) ( [ & ]( ) { return ( a ) > ( b ) ? ( fa ) : ( fb ); } ( ) )
+#define do_min( a, b, fa, fb ) ( ( a < b ) ? ( [ & ]( ) { fa; }( ) ) : ( [ & ]( ) { fb; }( )))
+#define do_max( a, b, fa, fb ) ( ( a > b ) ? ( [ & ]( ) { fa; }( ) ) : ( [ & ]( ) { fb; }( )))
 
 class hue
 {
