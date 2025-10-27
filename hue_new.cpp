@@ -28,13 +28,13 @@ public:
         switch ( ph )
         {
             // phases somewhat improves the transition between hue values.
-            case 0: do_min( rgb[ 1 ], 255, rgb[ 1 ] += s, { rgb[ 1 ] = 255; ph = 1; } ); break;
-            case 1: do_max( rgb[ 0 ], 0,   rgb[ 0 ] -= s, { rgb[ 0 ] = 0;   ph = 2; } ); break;
-            case 2: do_min( rgb[ 2 ], 255, rgb[ 2 ] += s, { rgb[ 2 ] = 255; ph = 3; } ); break;
-            case 3: do_max( rgb[ 1 ], 0,   rgb[ 1 ] -= s, { rgb[ 1 ] = 0;   ph = 4; } ); break;
-            case 4: do_min( rgb[ 0 ], 255, rgb[ 0 ] += s, { rgb[ 0 ] = 255; ph = 5; } ); break;
-            case 5: do_max( rgb[ 2 ], 0,   rgb[ 2 ] -= s, { rgb[ 2 ] = 0;   ph = 0; } ); break;
-        }
+            case 0: do_min( rgb[ 1 ], 255, rgb[ 1 ] += s, { rgb[ 1 ] = 255; ph = 1; } ); break; // P1: R -> G
+            case 1: do_max( rgb[ 0 ], 0,   rgb[ 0 ] -= s, { rgb[ 0 ] = 0;   ph = 2; } ); break; // P2: G
+            case 2: do_min( rgb[ 2 ], 255, rgb[ 2 ] += s, { rgb[ 2 ] = 255; ph = 3; } ); break; // P3: G -> B
+            case 3: do_max( rgb[ 1 ], 0,   rgb[ 1 ] -= s, { rgb[ 1 ] = 0;   ph = 4; } ); break; // P4: B
+            case 4: do_min( rgb[ 0 ], 255, rgb[ 0 ] += s, { rgb[ 0 ] = 255; ph = 5; } ); break; // P5: B -> R
+            case 5: do_max( rgb[ 2 ], 0,   rgb[ 2 ] -= s, { rgb[ 2 ] = 0;   ph = 0; } ); break; // P6: R and so on
+        } 
 
         return RGB( rgb[ 0 ], rgb[ 1 ], rgb[ 2 ] );
      }
